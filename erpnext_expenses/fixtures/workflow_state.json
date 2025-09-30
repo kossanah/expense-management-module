@@ -2,6 +2,15 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-29 19:57:55.426142",
+  "name": "Pending Journal Entry",
+  "style": "",
+  "workflow_state_name": "Pending Journal Entry"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "question-sign",
   "modified": "2024-03-29 16:28:10.783221",
   "name": "Pending",
