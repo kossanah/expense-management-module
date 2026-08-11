@@ -69,11 +69,10 @@
       "options": "Expense Detail"
     },
     {
-      "allow_on_submit": 1,
-      "depends_on": "eval: doc.workflow_state == 'Pending Journal Entry'",
       "fieldname": "paying_account",
       "fieldtype": "Link",
       "label": "Paying Account",
+      "mandatory_depends_on": "eval: doc.workflow_state == 'Draft'",
       "options": "Account"
     }
   ],
