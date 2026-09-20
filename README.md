@@ -3,7 +3,9 @@
 This package contains an Expense Management Module for ERPNext.
 
 ## Expense Report Workflow
-The app does not install or update a workflow for `Expense Report`. Each company should create and maintain its own workflow so upgrades do not overwrite its approval process.
+The app includes a simple default workflow for `Expense Report` as a starting template. It is designed for a single cashier or operator. Companies can extend it with manager approval, finance review, rejection, or amendment states.
+
+Workflow records are site data. If a company customizes the workflow in a production site, do not export that customized record back into this app's fixtures unless it is intended to become the shared default for every site. Test fixture changes on a staging site before running production migrations.
 
 The workflow must include a transition whose action is exactly `Create Journal Entries`. When that action is used, the app creates and submits the Journal Entry in the background using the report's `Paying Account` and expense accounts. The transition condition should require `doc.company` and `doc.paying_account`.
 
